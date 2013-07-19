@@ -1,0 +1,3014 @@
+/* ============================================================
+
+320 and Up by Andy Clarke
+Version: 3.0
+URL: http://stuffandnonsense.co.uk/projects/320andup/
+Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+============================================================ */
+/* TESTING */
+/* Reset =================================================== */
+/* line 12, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_reset.scss */
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 15, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_reset.scss */
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/* Variables =================================================== */
+/* Mixins =================================================== */
+/* Page =================================================== */
+@-webkit-viewport {
+  width: device-width;
+}
+
+@-moz-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+/* line 29, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+html {
+  background: white;
+  font-size: 62.5%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: white;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 37, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: transparent;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  color: black;
+}
+
+/* line 47, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 208, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+}
+/* line 211, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 56, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.menu-button {
+  display: block;
+  float: right;
+  background: #444;
+  border: 1px solid black;
+  padding: 7px 10px;
+  margin: 5px;
+}
+/* line 63, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.menu-button .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin-top: 3px;
+  background-color: #fff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+/* line 73, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.navbar {
+  background: #1b1b1b;
+  overflow: hidden;
+  max-height: 44px;
+  z-index: 100;
+  -webkit-transition: max-height 0.5s;
+  -moz-transition: max-height 0.5s;
+  -ms-transition: max-height 0.5s;
+  -o-transition: max-height 0.5s;
+  transition: max-height 0.5s;
+}
+/* line 79, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.navbar.open {
+  max-height: 226px;
+}
+/* line 83, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.navbar .navbar-inner .logo, .navbar .navbar-inner .nav li a {
+  display: block;
+  padding: 9px 15px;
+  font-weight: bold;
+  color: #999999;
+  margin-bottom: 4px;
+}
+/* line 90, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.navbar .navbar-inner .nav {
+  margin-bottom: 0;
+  list-style: none;
+}
+/* line 93, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.navbar .navbar-inner .nav li {
+  border-top: 1px solid black;
+}
+
+/* line 103, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  text-shadow: -1px 1px 0px #e0b78a;
+  background-color: #cb790f;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#feb900), to(#cb790f));
+  background-image: -webkit-linear-gradient(left, #feb900, #cb790f);
+  background-image: -moz-linear-gradient(left, #feb900, #cb790f);
+  background-image: -ms-linear-gradient(left, #feb900, #cb790f);
+  background-image: -o-linear-gradient(left, #feb900, #cb790f);
+  background-image: linear-gradient(left, #feb900, #cb790f);
+  background-repeat: repeat-x;
+}
+/* line 108, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.hero h1 {
+  margin: 10px 0;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 1em;
+}
+/* line 114, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.hero p {
+  font-size: 18px;
+  margin: 0 0 30px 0;
+  font-weight: 200;
+  line-height: 1.25;
+}
+/* line 120, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.hero .btn {
+  text-shadow: 1px 1px 0px black;
+}
+
+/* line 125, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.slider {
+  text-align: center;
+  position: relative;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#383234), to(#231f20));
+  background-image: -webkit-linear-gradient(top, #383234, #231f20);
+  background-color: #231f20;
+  background-image: -moz-linear-gradient(top, #383234, #231f20);
+  background-image: -ms-linear-gradient(top, #383234, #231f20);
+  background-image: -o-linear-gradient(top, #383234, #231f20);
+  background-image: linear-gradient(top, #383234, #231f20);
+  background-repeat: repeat-x;
+}
+/* line 129, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.slider .container {
+  position: relative;
+}
+/* line 131, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.slider .container .slide {
+  position: relative;
+  display: none;
+}
+/* line 134, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.slider .container .slide.active {
+  display: block;
+}
+
+/* line 141, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+.row {
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+/* line 146, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+footer {
+  padding: 15px 0;
+  text-align: center;
+  background: #1b1b1b;
+  color: white;
+  overflow: auto;
+}
+/* line 152, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+footer p {
+  padding: 9px 15px;
+}
+/* line 155, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+footer .social {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 280px;
+}
+/* line 160, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+footer .social li {
+  float: left;
+  height: 80px;
+  width: 80px;
+  list-style: none;
+  border-radius: 50%;
+  background: #000;
+  margin-right: 20px;
+}
+/* line 168, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+footer .social li a {
+  font-size: 42px;
+  padding-top: 24px;
+  color: #bfbfbf;
+}
+/* line 172, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+footer .social li a:visited {
+  color: gray;
+  text-decoration: none;
+}
+/* line 176, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+footer .social li a:hover {
+  text-decoration: none;
+}
+/* line 181, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+footer .social li:last-child {
+  margin-right: 0;
+}
+/* line 185, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+footer .toplink {
+  clear: both;
+}
+/* line 187, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_site.scss */
+footer .toplink a {
+  display: inline-block;
+  padding: 30px;
+  color: #fff;
+}
+
+/* Typography =================================================== */
+/* line 19, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: inherit;
+  font-weight: bold;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+/* line 27, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+h1 small,
+h2 small {
+  font-weight: normal;
+  color: #bfbfbf;
+}
+
+/* line 32, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+h1,
+.h1 {
+  margin-bottom: 0.75em;
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 1.2;
+}
+
+/* line 38, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+h2,
+.h2 {
+  margin-bottom: 0.75em;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+
+/* line 44, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+h3,
+.h3 {
+  margin-bottom: 1em;
+  font-size: 21px;
+  font-size: 2.1rem;
+  line-height: 1.3;
+}
+
+/* line 50, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+h4,
+.h4 {
+  margin-bottom: 1.5em;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.25;
+}
+
+/* line 56, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+h5,
+.h5 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin-bottom: 1.5em;
+}
+
+/* line 61, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+h6,
+.h6 {
+  margin-bottom: 1.5em;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* line 72, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+.header h1,
+.header h2,
+.header h3 {
+  float: left;
+  margin-right: 24px;
+}
+/* line 76, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+.header h1 a,
+.header h2 a,
+.header h3 a {
+  display: block;
+  position: relative;
+  top: 6px;
+  float: right;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  background-color: white;
+}
+/* line 85, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+.header h1:hover,
+.header h2:hover,
+.header h3:hover {
+  background-color: white;
+}
+
+/* line 90, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+.header .a-rss,
+.header .a-rss:hover {
+  float: left;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  background: transparent url(../img/a-rss.png) no-repeat 0 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 104, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+p,
+ol,
+ul,
+dl,
+address {
+  margin-bottom: 1.5em;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+}
+
+/* line 109, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+small {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+/* line 113, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+ul,
+ol {
+  margin: 0 0 1.5em -24px;
+  padding: 0 0 0 24px;
+}
+
+/* line 118, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+li ul,
+li ol {
+  margin: 0;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+/* line 124, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+blockquote {
+  margin: 0 0 1.5em -24px;
+  padding-left: 24px;
+  border-left: 2px solid white;
+  font-family: Cambria, Georgia, Times, "Times New Roman";
+  font-style: normal;
+}
+
+/* line 131, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+q {
+  quotes: none;
+}
+
+/* line 137, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 141, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+cite {
+  font-style: normal;
+}
+
+/* line 147, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+dl,
+dd {
+  margin-bottom: 1.5em;
+}
+
+/* line 150, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 155, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+.dl-horizontal dt {
+  float: left;
+  clear: left;
+  width: 20.25%;
+  text-align: right;
+}
+/* line 161, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+.dl-horizontal dd {
+  margin-left: 22.78%;
+}
+
+/* line 167, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+abbr[title] {
+  border-bottom: 1px dotted white;
+  cursor: help;
+}
+
+/* line 171, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 174, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 177, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+ins {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
+/* line 182, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+mark {
+  background-color: white;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 191, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+pre,
+code,
+kbd,
+samp {
+  font-family: Monaco, Courier New, monospace;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+}
+
+/* line 196, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 202, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+sub,
+sup {
+  position: relative;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 0;
+  vertical-align: baselineheight;
+}
+
+/* line 208, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+sup {
+  top: -.5em;
+}
+
+/* line 211, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_typography.scss */
+sub {
+  bottom: -.25em;
+}
+
+/* Colour =================================================== */
+/* line 16, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+a {
+  text-decoration: none;
+  color: #013568;
+}
+/* line 20, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+a:visited {
+  color: #000203;
+}
+/* line 23, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+a:hover {
+  text-decoration: underline;
+  color: #011b35;
+}
+/* line 27, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+a:focus {
+  outline: thin dotted;
+  color: black;
+}
+/* line 32, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 36, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+::-moz-selection {
+  background-color: white;
+  color: #cb790f;
+  text-shadow: none;
+}
+
+/* line 41, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+::selection {
+  background-color: white;
+  color: #cb790f;
+  text-shadow: none;
+}
+
+/* line 48, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch {
+  margin: 0 0 1.5em 0;
+  padding: 0;
+}
+
+/* line 52, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-row {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+}
+
+/* line 58, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-row-one {
+  background-color: black;
+}
+
+/* line 61, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-row-two {
+  background-color: white;
+}
+
+/* line 64, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-row span {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+
+/* line 72, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-base span:nth-child(1) {
+  background-color: rgba(203, 121, 15, 0.9);
+}
+
+/* line 75, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-base span:nth-child(2) {
+  background-color: rgba(203, 121, 15, 0.8);
+}
+
+/* line 78, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-base span:nth-child(3) {
+  background-color: rgba(203, 121, 15, 0.7);
+}
+
+/* line 81, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-base span:nth-child(4) {
+  background-color: rgba(203, 121, 15, 0.6);
+}
+
+/* line 86, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-alert span:nth-child(1) {
+  background-color: rgba(252, 248, 227, 0.9);
+}
+
+/* line 89, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-alert span:nth-child(2) {
+  background-color: rgba(252, 248, 227, 0.8);
+}
+
+/* line 92, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-alert span:nth-child(3) {
+  background-color: rgba(252, 248, 227, 0.7);
+}
+
+/* line 95, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-alert span:nth-child(4) {
+  background-color: rgba(252, 248, 227, 0.6);
+}
+
+/* line 100, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-error span:nth-child(1) {
+  background-color: rgba(218, 79, 73, 0.9);
+}
+
+/* line 103, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-error span:nth-child(2) {
+  background-color: rgba(218, 79, 73, 0.8);
+}
+
+/* line 106, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-error span:nth-child(3) {
+  background-color: rgba(218, 79, 73, 0.7);
+}
+
+/* line 109, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-error span:nth-child(4) {
+  background-color: rgba(218, 79, 73, 0.6);
+}
+
+/* line 114, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-info span:nth-child(1) {
+  background-color: rgba(217, 237, 247, 0.9);
+}
+
+/* line 117, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-info span:nth-child(2) {
+  background-color: rgba(217, 237, 247, 0.8);
+}
+
+/* line 120, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-info span:nth-child(3) {
+  background-color: rgba(217, 237, 247, 0.7);
+}
+
+/* line 123, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-info span:nth-child(4) {
+  background-color: rgba(217, 237, 247, 0.6);
+}
+
+/* line 128, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-success span:nth-child(1) {
+  background-color: rgba(91, 183, 91, 0.9);
+}
+
+/* line 131, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-success span:nth-child(2) {
+  background-color: rgba(91, 183, 91, 0.8);
+}
+
+/* line 134, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-success span:nth-child(3) {
+  background-color: rgba(91, 183, 91, 0.7);
+}
+
+/* line 137, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-success span:nth-child(4) {
+  background-color: rgba(91, 183, 91, 0.6);
+}
+
+/* line 142, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-warning span:nth-child(1) {
+  background-color: rgba(250, 167, 50, 0.9);
+}
+
+/* line 145, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-warning span:nth-child(2) {
+  background-color: rgba(250, 167, 50, 0.8);
+}
+
+/* line 148, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-warning span:nth-child(3) {
+  background-color: rgba(250, 167, 50, 0.7);
+}
+
+/* line 151, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_colour.scss */
+.swatch-warning span:nth-child(4) {
+  background-color: rgba(250, 167, 50, 0.6);
+}
+
+/* Texture =================================================== */
+/* line 18, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.alert {
+  margin-bottom: 1.5em;
+  padding: 8px 35px 8px 14px;
+  background-color: #fcf8e3;
+  border: 1px solid #f2e187;
+  -webkit-border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 2px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #9c8611;
+}
+/* line 28, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.alert .alert-heading {
+  color: inherit;
+}
+/* line 30, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.alert .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  float: right;
+  font-size: 21px;
+  font-size: 2.1rem;
+  font-weight: bold;
+  line-height: 18px;
+  color: inherit;
+}
+
+/* line 42, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.alert-success {
+  background-color: #c5e6c5;
+  border-color: #a2d6a2;
+  color: #347834;
+}
+
+/* line 48, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.alert-warning {
+  background-color: #fee7c7;
+  border-color: #fcd296;
+  color: #c17305;
+}
+
+/* line 54, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.alert-error {
+  background-color: #f4cac8;
+  border-color: #eba19e;
+  color: #da4f49;
+}
+
+/* line 60, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.alert-inverse {
+  background-color: #414141;
+  border-color: black;
+  color: white;
+}
+
+/* line 68, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.alert-block {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+/* line 74, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.alert-block .alert-heading {
+  margin-bottom: 0.1875em;
+  font-size: inherit;
+  font-weight: bold;
+}
+/* line 83, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.alert-block > p,
+.alert-block > ul {
+  margin-bottom: 0;
+}
+/* line 85, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.alert-block p + p {
+  margin-top: 5px;
+}
+
+/* line 90, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.badge {
+  padding: 1px 9px 2px;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  color: gray;
+  background-color: #e6e6e6;
+  -webkit-border-top-right-radius: 9px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 9px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-transition: background-color 0.25s 0 linear;
+  -moz-transition: background-color 0.25s 0 linear;
+  -ms-transition: background-color 0.25s 0 linear;
+  -o-transition: background-color 0.25s 0 linear;
+  transition: background-color 0.25s 0 linear;
+}
+/* line 100, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.badge:hover {
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 107, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.badge-error {
+  background-color: #da4f49;
+  color: white;
+}
+/* line 111, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.badge-error:hover {
+  background-color: #9d2520;
+  color: white;
+}
+
+/* line 117, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.badge-warning {
+  background-color: #faa732;
+  color: white;
+}
+/* line 121, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.badge-warning:hover {
+  background-color: #c17305;
+  color: white;
+}
+
+/* line 127, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.badge-success {
+  background-color: #5bb75b;
+  color: white;
+}
+/* line 131, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.badge-success:hover {
+  background-color: #347834;
+  color: white;
+}
+
+/* line 137, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.badge-info {
+  background-color: #d9edf7;
+  color: #247fad;
+}
+/* line 141, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.badge-info:hover {
+  background-color: #85c5e5;
+}
+
+/* line 144, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.badge-inverse {
+  background-color: #414141;
+  color: white;
+}
+/* line 148, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.badge-inverse:hover {
+  background-color: #0e0e0e;
+  color: white;
+}
+
+/* line 174, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.well {
+  min-height: 21px;
+  padding: 11px;
+  margin-bottom: 1.5em;
+  background-color: white;
+  border: 1px solid #f8d2a0;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 0 1px 10px #fbe8d0;
+  -moz-box-shadow: inset 0 1px 10px #fbe8d0;
+  box-shadow: inset 0 1px 10px #fbe8d0;
+}
+/* line 183, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.well p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 186, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.well-large {
+  padding: 22px;
+}
+
+/* line 188, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_texture.scss */
+.well-small {
+  padding: 6px;
+  -webkit-border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 2px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+/* Font Awesome: http://fortawesome.github.com/Font-Awesome/
+
+License
+-------------------------------------------------------
+The Font Awesome webfont, CSS, and LESS files are licensed under CC BY 3.0:
+http://creativecommons.org/licenses/by/3.0/ A mention of
+'Font Awesome - http://fortawesome.github.com/Font-Awesome' in human-readable
+source code is considered acceptable attribution (most common on the web).
+If human readable source code is not available to the end user, a mention in
+an 'About' or 'Credits' screen is considered acceptable (most common in desktop
+or mobile software). */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svgz#FontAwesomeRegular") format("svg"), url("../fonts/fontawesome-webfont.svg#FontAwesomeRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 29, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+/* line 40, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+li[class^="icon-"],
+li[class*=" icon-"] {
+  display: block;
+}
+
+/* line 44, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+/* line 52, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+/* makes the font 33% larger relative to the icon container */
+/* line 57, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-large:before {
+  vertical-align: top;
+  font-size: 4/3em;
+}
+
+/* line 63, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.btn [class^="icon-"],
+.btn [class*=" icon-"] {
+  /* keeps button heights with and without icons the same */
+  line-height: .9em;
+}
+
+/* line 70, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+li [class^="icon-"],
+li [class*=" icon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}
+/* line 76, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+li .icon-large[class^="icon-"],
+li .icon-large[class*=" icon-"] {
+  /* 1.5 increased font size for icon-large * 1.25 width */
+  width: 1.875em;
+}
+
+/* line 82, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+li[class^="icon-"],
+li[class*=" icon-"] {
+  margin-left: 0;
+  list-style-type: none;
+}
+/* line 86, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+li[class^="icon-"]:before,
+li[class*=" icon-"]:before {
+  text-indent: -2em;
+  text-align: center;
+}
+/* line 90, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+li[class^="icon-"].icon-large:before,
+li[class*=" icon-"].icon-large:before {
+  text-indent: -4/3em;
+}
+
+/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+    readers do not read off random characters that represent icons */
+/* line 98, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-glass:before {
+  content: "\f000";
+}
+
+/* line 99, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-music:before {
+  content: "\f001";
+}
+
+/* line 100, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-search:before {
+  content: "\f002";
+}
+
+/* line 101, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-envelope:before {
+  content: "\f003";
+}
+
+/* line 102, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-heart:before {
+  content: "\f004";
+}
+
+/* line 103, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-star:before {
+  content: "\f005";
+}
+
+/* line 104, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-star-empty:before {
+  content: "\f006";
+}
+
+/* line 105, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-user:before {
+  content: "\f007";
+}
+
+/* line 106, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-film:before {
+  content: "\f008";
+}
+
+/* line 107, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-th-large:before {
+  content: "\f009";
+}
+
+/* line 108, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-th:before {
+  content: "\f00a";
+}
+
+/* line 109, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-th-list:before {
+  content: "\f00b";
+}
+
+/* line 110, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-ok:before {
+  content: "\f00c";
+}
+
+/* line 111, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-remove:before {
+  content: "\f00d";
+}
+
+/* line 112, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-zoom-in:before {
+  content: "\f00e";
+}
+
+/* line 113, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-zoom-out:before {
+  content: "\f010";
+}
+
+/* line 114, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-off:before {
+  content: "\f011";
+}
+
+/* line 115, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-signal:before {
+  content: "\f012";
+}
+
+/* line 116, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-cog:before {
+  content: "\f013";
+}
+
+/* line 117, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-trash:before {
+  content: "\f014";
+}
+
+/* line 118, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-home:before {
+  content: "\f015";
+}
+
+/* line 119, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-file:before {
+  content: "\f016";
+}
+
+/* line 120, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-time:before {
+  content: "\f017";
+}
+
+/* line 121, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-road:before {
+  content: "\f018";
+}
+
+/* line 122, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-download-alt:before {
+  content: "\f019";
+}
+
+/* line 123, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-download:before {
+  content: "\f01a";
+}
+
+/* line 124, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-upload:before {
+  content: "\f01b";
+}
+
+/* line 125, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-inbox:before {
+  content: "\f01c";
+}
+
+/* line 126, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-play-circle:before {
+  content: "\f01d";
+}
+
+/* line 127, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-repeat:before {
+  content: "\f01e";
+}
+
+/* \f020 is not a valid unicode character. all shifted one down */
+/* line 129, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-refresh:before {
+  content: "\f021";
+}
+
+/* line 130, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-list-alt:before {
+  content: "\f022";
+}
+
+/* line 131, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-lock:before {
+  content: "\f023";
+}
+
+/* line 132, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-flag:before {
+  content: "\f024";
+}
+
+/* line 133, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-headphones:before {
+  content: "\f025";
+}
+
+/* line 134, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-volume-off:before {
+  content: "\f026";
+}
+
+/* line 135, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-volume-down:before {
+  content: "\f027";
+}
+
+/* line 136, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-volume-up:before {
+  content: "\f028";
+}
+
+/* line 137, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-qrcode:before {
+  content: "\f029";
+}
+
+/* line 138, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-barcode:before {
+  content: "\f02a";
+}
+
+/* line 139, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-tag:before {
+  content: "\f02b";
+}
+
+/* line 140, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-tags:before {
+  content: "\f02c";
+}
+
+/* line 141, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-book:before {
+  content: "\f02d";
+}
+
+/* line 142, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-bookmark:before {
+  content: "\f02e";
+}
+
+/* line 143, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-print:before {
+  content: "\f02f";
+}
+
+/* line 144, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-camera:before {
+  content: "\f030";
+}
+
+/* line 145, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-font:before {
+  content: "\f031";
+}
+
+/* line 146, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-bold:before {
+  content: "\f032";
+}
+
+/* line 147, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-italic:before {
+  content: "\f033";
+}
+
+/* line 148, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-text-height:before {
+  content: "\f034";
+}
+
+/* line 149, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-text-width:before {
+  content: "\f035";
+}
+
+/* line 150, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-align-left:before {
+  content: "\f036";
+}
+
+/* line 151, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-align-center:before {
+  content: "\f037";
+}
+
+/* line 152, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-align-right:before {
+  content: "\f038";
+}
+
+/* line 153, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-align-justify:before {
+  content: "\f039";
+}
+
+/* line 154, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-list:before {
+  content: "\f03a";
+}
+
+/* line 155, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-indent-left:before {
+  content: "\f03b";
+}
+
+/* line 156, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-indent-right:before {
+  content: "\f03c";
+}
+
+/* line 157, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-facetime-video:before {
+  content: "\f03d";
+}
+
+/* line 158, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-picture:before {
+  content: "\f03e";
+}
+
+/* line 159, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-pencil:before {
+  content: "\f040";
+}
+
+/* line 160, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-map-marker:before {
+  content: "\f041";
+}
+
+/* line 161, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-adjust:before {
+  content: "\f042";
+}
+
+/* line 162, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-tint:before {
+  content: "\f043";
+}
+
+/* line 163, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-edit:before {
+  content: "\f044";
+}
+
+/* line 164, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-share:before {
+  content: "\f045";
+}
+
+/* line 165, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-check:before {
+  content: "\f046";
+}
+
+/* line 166, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-move:before {
+  content: "\f047";
+}
+
+/* line 167, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-step-backward:before {
+  content: "\f048";
+}
+
+/* line 168, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-fast-backward:before {
+  content: "\f049";
+}
+
+/* line 169, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-backward:before {
+  content: "\f04a";
+}
+
+/* line 170, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-play:before {
+  content: "\f04b";
+}
+
+/* line 171, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-pause:before {
+  content: "\f04c";
+}
+
+/* line 172, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-stop:before {
+  content: "\f04d";
+}
+
+/* line 173, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-forward:before {
+  content: "\f04e";
+}
+
+/* line 175, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-fast-forward:before {
+  content: "\f050";
+}
+
+/* line 176, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-step-forward:before {
+  content: "\f051";
+}
+
+/* line 177, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-eject:before {
+  content: "\f052";
+}
+
+/* line 178, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-chevron-left:before {
+  content: "\f053";
+}
+
+/* line 179, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-chevron-right:before {
+  content: "\f054";
+}
+
+/* line 180, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-plus-sign:before {
+  content: "\f055";
+}
+
+/* line 181, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-minus-sign:before {
+  content: "\f056";
+}
+
+/* line 182, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-remove-sign:before {
+  content: "\f057";
+}
+
+/* line 183, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-ok-sign:before {
+  content: "\f058";
+}
+
+/* line 184, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-question-sign:before {
+  content: "\f059";
+}
+
+/* line 185, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-info-sign:before {
+  content: "\f05a";
+}
+
+/* line 186, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-screenshot:before {
+  content: "\f05b";
+}
+
+/* line 187, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-remove-circle:before {
+  content: "\f05c";
+}
+
+/* line 188, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-ok-circle:before {
+  content: "\f05d";
+}
+
+/* line 189, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-ban-circle:before {
+  content: "\f05e";
+}
+
+/* line 191, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-arrow-left:before {
+  content: "\f060";
+}
+
+/* line 192, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-arrow-right:before {
+  content: "\f061";
+}
+
+/* line 193, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-arrow-up:before {
+  content: "\f062";
+}
+
+/* line 194, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-arrow-down:before {
+  content: "\f063";
+}
+
+/* line 195, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-share-alt:before {
+  content: "\f064";
+}
+
+/* line 196, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-resize-full:before {
+  content: "\f065";
+}
+
+/* line 197, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-resize-small:before {
+  content: "\f066";
+}
+
+/* line 198, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-plus:before {
+  content: "\f067";
+}
+
+/* line 199, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-minus:before {
+  content: "\f068";
+}
+
+/* line 200, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-asterisk:before {
+  content: "\f069";
+}
+
+/* line 201, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-exclamation-sign:before {
+  content: "\f06a";
+}
+
+/* line 202, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-gift:before {
+  content: "\f06b";
+}
+
+/* line 203, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-leaf:before {
+  content: "\f06c";
+}
+
+/* line 204, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-fire:before {
+  content: "\f06d";
+}
+
+/* line 205, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-eye-open:before {
+  content: "\f06e";
+}
+
+/* line 206, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-eye-close:before {
+  content: "\f070";
+}
+
+/* line 207, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-warning-sign:before {
+  content: "\f071";
+}
+
+/* line 208, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-plane:before {
+  content: "\f072";
+}
+
+/* line 209, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-calendar:before {
+  content: "\f073";
+}
+
+/* line 210, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-random:before {
+  content: "\f074";
+}
+
+/* line 211, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-comment:before {
+  content: "\f075";
+}
+
+/* line 212, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-magnet:before {
+  content: "\f076";
+}
+
+/* line 213, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-chevron-up:before {
+  content: "\f077";
+}
+
+/* line 214, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-chevron-down:before {
+  content: "\f078";
+}
+
+/* line 215, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-retweet:before {
+  content: "\f079";
+}
+
+/* line 216, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-shopping-cart:before {
+  content: "\f07a";
+}
+
+/* line 217, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-folder-close:before {
+  content: "\f07b";
+}
+
+/* line 218, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-folder-open:before {
+  content: "\f07c";
+}
+
+/* line 219, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-resize-vertical:before {
+  content: "\f07d";
+}
+
+/* line 220, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-resize-horizontal:before {
+  content: "\f07e";
+}
+
+/* line 221, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-bar-chart:before {
+  content: "\f080";
+}
+
+/* line 222, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-twitter-sign:before {
+  content: "\f081";
+}
+
+/* line 223, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-facebook-sign:before {
+  content: "\f082";
+}
+
+/* line 224, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-camera-retro:before {
+  content: "\f083";
+}
+
+/* line 225, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-key:before {
+  content: "\f084";
+}
+
+/* line 226, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-cogs:before {
+  content: "\f085";
+}
+
+/* line 227, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-comments:before {
+  content: "\f086";
+}
+
+/* line 228, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-thumbs-up:before {
+  content: "\f087";
+}
+
+/* line 229, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-thumbs-down:before {
+  content: "\f088";
+}
+
+/* line 230, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-star-half:before {
+  content: "\f089";
+}
+
+/* line 231, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-heart-empty:before {
+  content: "\f08a";
+}
+
+/* line 232, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-signout:before {
+  content: "\f08b";
+}
+
+/* line 233, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-linkedin-sign:before {
+  content: "\f08c";
+}
+
+/* line 234, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-pushpin:before {
+  content: "\f08d";
+}
+
+/* line 235, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-external-link:before {
+  content: "\f08e";
+}
+
+/* line 236, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-signin:before {
+  content: "\f090";
+}
+
+/* line 237, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-trophy:before {
+  content: "\f091";
+}
+
+/* line 238, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-github-sign:before {
+  content: "\f092";
+}
+
+/* line 239, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-upload-alt:before {
+  content: "\f093";
+}
+
+/* line 240, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_font-awesome.scss */
+.icon-lemon:before {
+  content: "\f094";
+}
+
+/* Elements =================================================== */
+/* line 14, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_elements.scss */
+hr {
+  display: block;
+  margin: 1em 0;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+/* line 25, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_elements.scss */
+img {
+  max-width: 100%;
+  border-width: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 31, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_elements.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 36, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_elements.scss */
+figure {
+  margin-bottom: 1.5em;
+}
+/* line 39, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_elements.scss */
+figure img {
+  margin-bottom: 0.375em;
+}
+/* line 42, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_elements.scss */
+figure figcaption {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: gray;
+}
+
+/* line 51, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_elements.scss */
+.list-bordered {
+  list-style-type: none;
+  margin: 0 0 1.5em 0;
+  padding: 0;
+}
+/* line 56, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_elements.scss */
+.list-bordered li {
+  margin-bottom: 0.375em;
+  padding-bottom: 0.375em;
+  border-bottom: 1px dashed white;
+}
+/* line 61, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_elements.scss */
+.list-bordered li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom-width: 0;
+}
+
+/* Forms =================================================== */
+/* line 12, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+form {
+  margin: 0 0 1.5em 0;
+}
+/* line 15, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+form fieldset {
+  margin-bottom: 1.5em;
+  padding: 0;
+  border-width: 0;
+}
+/* line 20, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+form legend {
+  display: block;
+  width: 100%;
+  margin-bottom: 3em;
+  *margin-left: -7px;
+  padding: 0;
+  color: black;
+  border: 0;
+  border-bottom: 1px solid #bfbfbf;
+  white-space: normal;
+}
+/* line 31, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+form legend small {
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #bfbfbf;
+}
+/* line 36, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+form p {
+  margin-bottom: 0.75em;
+}
+/* line 39, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+form ul {
+  list-style-type: none;
+  margin: 0 0 1.5em 0;
+  padding: 0;
+}
+/* line 44, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+form br {
+  display: none;
+}
+
+/* line 52, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 14px;
+  font-size: 1.4rem;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+/* line 60, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+input,
+button,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 64, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+label {
+  display: block;
+  margin-bottom: 0.1875em;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+/* line 73, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+label input,
+label textarea,
+label select {
+  display: block;
+}
+
+/* line 79, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+input,
+textarea,
+select {
+  display: inline-block;
+  width: 100%;
+  padding: 4px;
+  margin-bottom: 0.375em;
+  background-color: white;
+  border: 1px solid #bfbfbf;
+  color: black;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  padding: 10px;
+}
+/* line 90, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: gray;
+}
+
+/* line 94, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.input-mini {
+  width: 60px;
+}
+
+/* line 97, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.input-small {
+  width: 90px;
+}
+
+/* line 102, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 3px 0;
+  *margin-top: 0;
+  line-height: normal;
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 0 \9;
+}
+
+/* line 114, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  *width: 13px;
+  *height: 13px;
+}
+
+/* line 120, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+input[type="image"] {
+  border: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 124, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+input[type="file"] {
+  width: auto;
+  padding: initial;
+  line-height: initial;
+  border: initial;
+  background-color: transparent;
+  background-color: initial;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 135, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  *overflow: visible;
+}
+
+/* line 142, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+select,
+input[type="file"] {
+  height: 28px;
+  *margin-top: 4px;
+  line-height: 28px;
+}
+
+/* line 147, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+select {
+  width: auto;
+  background-color: white;
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+
+/* line 153, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+/* line 156, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+textarea {
+  resize: vertical;
+  overflow: auto;
+  height: auto;
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 162, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+input[type="hidden"] {
+  display: none;
+}
+
+/* line 166, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.radio,
+.checkbox {
+  padding-left: 18px;
+  font-weight: normal;
+}
+
+/* line 171, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: -18px;
+}
+
+/* line 176, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.radio.inline,
+.checkbox.inline {
+  display: inline-block;
+  padding-top: 5px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+/* line 183, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-left: 10px;
+}
+
+/* line 193, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* line 200, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+input:focus,
+textarea:focus {
+  border-color: #cb790f, 40%;
+  outline: 0;
+  outline: thin dotted \9;
+}
+
+/* line 208, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 211, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+::-webkit-input-placeholder {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+/* line 214, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+input:-moz-placeholder {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+/* line 220, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.help-block,
+.help-inline {
+  color: gray;
+}
+
+/* line 223, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.help-block {
+  display: block;
+  margin-bottom: 0.75em;
+}
+
+/* line 227, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.help-inline {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+
+/* line 236, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.form-inline input,
+.form-inline textarea,
+.form-inline select {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+/* line 240, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.form-inline label {
+  display: inline-block;
+}
+
+/* line 245, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.form-inline .radio,
+.form-inline .checkbox,
+.form-inline .radio {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+/* line 251, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: 0;
+  margin-right: 3px;
+}
+
+/* line 260, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.form-search input,
+.form-search textarea,
+.form-search select {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+/* line 264, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.form-search .search-query {
+  padding-left: 14px;
+  padding-right: 14px;
+  margin-bottom: 0;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+}
+
+/* line 270, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.form-search label {
+  display: inline-block;
+}
+
+/* line 275, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.form-search .radio,
+.form-search .checkbox,
+.form-inline .radio {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+/* line 281, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_forms.scss */
+.form-search .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: 0;
+  margin-right: 3px;
+}
+
+/* Buttons =================================================== */
+/* line 12, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding: 6px 11px 6px;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.5em;
+  color: #404040;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #e6e6e6;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#d9d9d9));
+  background-image: -webkit-linear-gradient(top, white, #d9d9d9);
+  background-color: #d9d9d9;
+  background-image: -moz-linear-gradient(top, white, #d9d9d9);
+  background-image: -ms-linear-gradient(top, white, #d9d9d9);
+  background-image: -o-linear-gradient(top, white, #d9d9d9);
+  background-image: linear-gradient(top, white, #d9d9d9);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  cursor: pointer;
+  *margin-left: .3em;
+}
+/* line 38, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn:visited, .btn:hover {
+  color: #404040;
+  text-decoration: none;
+}
+
+/* line 44, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+input[type="submit"].btn:hover {
+  border-color: #cccccc;
+}
+
+/* line 46, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn:first-child {
+  *margin-left: 0;
+}
+
+/* line 50, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-disabled {
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* line 55, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-error {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cb790f), to(#c72f29));
+  background-image: -webkit-linear-gradient(top, #cb790f, #c72f29);
+  background-color: #c72f29;
+  background-image: -moz-linear-gradient(top, #cb790f, #c72f29);
+  background-image: -ms-linear-gradient(top, #cb790f, #c72f29);
+  background-image: -o-linear-gradient(top, #cb790f, #c72f29);
+  background-image: linear-gradient(top, #cb790f, #c72f29);
+  background-repeat: repeat-x;
+  border-color: #b22a24;
+  border-bottom-color: #9d2520;
+  color: white;
+}
+/* line 64, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-error:visited, .btn-error:hover {
+  color: white;
+}
+
+/* line 69, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-info {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d9edf7), to(#afd9ee));
+  background-image: -webkit-linear-gradient(top, #d9edf7, #afd9ee);
+  background-color: #afd9ee;
+  background-image: -moz-linear-gradient(top, #d9edf7, #afd9ee);
+  background-image: -ms-linear-gradient(top, #d9edf7, #afd9ee);
+  background-image: -o-linear-gradient(top, #d9edf7, #afd9ee);
+  background-image: linear-gradient(top, #d9edf7, #afd9ee);
+  background-repeat: repeat-x;
+  border-color: #9acfea;
+  border-bottom-color: #85c5e5;
+  color: #247fad;
+}
+/* line 78, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-info:visited, .btn-info:hover {
+  color: #247fad;
+}
+
+/* line 83, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-inverse {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#414141), to(#272727));
+  background-image: -webkit-linear-gradient(top, #414141, #272727);
+  background-color: #272727;
+  background-image: -moz-linear-gradient(top, #414141, #272727);
+  background-image: -ms-linear-gradient(top, #414141, #272727);
+  background-image: -o-linear-gradient(top, #414141, #272727);
+  background-image: linear-gradient(top, #414141, #272727);
+  background-repeat: repeat-x;
+  border-color: #1b1b1b;
+  border-bottom-color: #0e0e0e;
+  color: white;
+}
+/* line 92, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-inverse:visited, .btn-inverse:hover {
+  color: white;
+}
+
+/* line 97, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-primary {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cb790f), to(#9c5d0b));
+  background-image: -webkit-linear-gradient(top, #cb790f, #9c5d0b);
+  background-color: #9c5d0b;
+  background-image: -moz-linear-gradient(top, #cb790f, #9c5d0b);
+  background-image: -ms-linear-gradient(top, #cb790f, #9c5d0b);
+  background-image: -o-linear-gradient(top, #cb790f, #9c5d0b);
+  background-image: linear-gradient(top, #cb790f, #9c5d0b);
+  background-repeat: repeat-x;
+  border-color: #844f0a;
+  border-bottom-color: #6c4008;
+  color: white;
+}
+/* line 106, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-primary:visited, .btn-primary:hover {
+  color: white;
+}
+
+/* line 111, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-success {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bb75b), to(#449b44));
+  background-image: -webkit-linear-gradient(top, #5bb75b, #449b44);
+  background-color: #449b44;
+  background-image: -moz-linear-gradient(top, #5bb75b, #449b44);
+  background-image: -ms-linear-gradient(top, #5bb75b, #449b44);
+  background-image: -o-linear-gradient(top, #5bb75b, #449b44);
+  background-image: linear-gradient(top, #5bb75b, #449b44);
+  background-repeat: repeat-x;
+  border-color: #3c893c;
+  border-bottom-color: #347834;
+}
+
+/* line 121, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-warning {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#faa732), to(#f39106));
+  background-image: -webkit-linear-gradient(top, #faa732, #f39106);
+  background-color: #f39106;
+  background-image: -moz-linear-gradient(top, #faa732, #f39106);
+  background-image: -ms-linear-gradient(top, #faa732, #f39106);
+  background-image: -o-linear-gradient(top, #faa732, #f39106);
+  background-image: linear-gradient(top, #faa732, #f39106);
+  background-repeat: repeat-x;
+  border-color: #da8205;
+  border-bottom-color: #c17305;
+}
+
+/* line 131, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-extlarge {
+  padding: 11px 22px;
+  font-size: 21px;
+  font-size: 2.1rem;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 137, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn.btn-large {
+  *padding-top: 7px;
+  *padding-bottom: 7px;
+}
+
+/* line 144, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-large {
+  padding: 11px 22px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: normal;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 151, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-small {
+  padding: 6px 10px;
+  font-size: 11px;
+  font-size: 1.1rem;
+  line-height: 16px;
+}
+
+/* line 157, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-mini {
+  padding: 3px 5px;
+  font-size: 11px;
+  font-size: 1.1rem;
+  line-height: 14px;
+}
+
+/* line 163, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-group {
+  position: relative;
+  *zoom: 1;
+  *margin-left: .3em;
+  margin-bottom: 1.5em;
+}
+/* line 169, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-group .btn {
+  position: relative;
+  float: left;
+  margin-left: -1px;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+/* line 175, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-group .btn:first-child {
+  margin-left: 0;
+  -webkit-border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 2px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 2px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+/* line 180, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-group .btn:last-child {
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 2px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+/* line 183, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-group .btn.large:first-child {
+  margin-left: 0;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 4px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+/* line 188, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-group .btn.large:last-child {
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+/* line 193, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-toolbar {
+  clear: both;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+/* line 200, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_buttons.scss */
+.btn-toolbar .btn-group {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* Tables =================================================== */
+/* line 12, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_tables.scss */
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1.5em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: transparent;
+}
+/* line 21, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_tables.scss */
+table th,
+table td {
+  padding: 8px;
+  vertical-align: top;
+  border-top: 1px solid #f9d8ad;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+  text-align: left;
+}
+/* line 29, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_tables.scss */
+table th {
+  font-weight: bold;
+}
+/* line 32, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_tables.scss */
+table thead th {
+  vertical-align: bottom;
+}
+/* line 38, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_tables.scss */
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+/* line 41, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_tables.scss */
+table tbody + tbody {
+  border-top: 2px solid #f9d8ad;
+}
+/* line 45, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_tables.scss */
+table tbody tr td,
+table tbody tr th {
+  -webkit-transition: background-color 0.25s 0 linear;
+  -moz-transition: background-color 0.25s 0 linear;
+  -ms-transition: background-color 0.25s 0 linear;
+  -o-transition: background-color 0.25s 0 linear;
+  transition: background-color 0.25s 0 linear;
+}
+/* line 49, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_tables.scss */
+table tbody tr:hover td,
+table tbody tr:hover th {
+  background-color: #fcefdd;
+}
+
+/* line 58, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_tables.scss */
+.table-condensed th,
+.table-condensed td {
+  padding: 4px 5px;
+}
+
+/* line 64, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_tables.scss */
+.table-bordered {
+  border: 1px solid #f9d8ad;
+  border-left: 0;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+}
+/* line 71, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_tables.scss */
+.table-bordered th,
+.table-bordered td {
+  border-left: 1px solid #f9d8ad;
+}
+/* line 76, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_tables.scss */
+.table-bordered thead:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+
+/* line 85, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_tables.scss */
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th {
+  background-color: white;
+}
+
+/* Gallery Item Styles ======================================*/
+/* line 12, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_page.scss */
+.page-header {
+  text-align: center;
+  margin: 12px 0;
+}
+/* line 15, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_page.scss */
+.page-header h1 {
+  font-size: 30px;
+  margin: 0;
+}
+/* line 19, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_page.scss */
+.page-header h2 {
+  font-size: 18px;
+}
+
+/* line 24, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_page.scss */
+.gallery-showcase, .gallery-description {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* line 30, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_page.scss */
+.gallery-image-area .featured-image-item {
+  display: none;
+}
+/* line 32, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_page.scss */
+.gallery-image-area .featured-image-item.active {
+  display: block;
+}
+/* line 36, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_page.scss */
+.gallery-image-area ul {
+  list-style: none;
+}
+/* line 39, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_page.scss */
+.gallery-image-area .thumbnail {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+/* line 45, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_page.scss */
+.gallery-description {
+  clear: left;
+}
+
+@media print {
+  /* Print =================================================== */
+  /* line 14, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_print.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 27, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_print.scss */
+  h2, h3 {
+    orphans: 3;
+    widows: 3;
+    page-break-after: avoid;
+  }
+
+  /* line 32, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_print.scss */
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 36, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_print.scss */
+  pre, blockquote {
+    border: 1px solid gray;
+    page-break-inside: avoid;
+  }
+
+  /* line 40, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 45, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_print.scss */
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 48, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 52, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_print.scss */
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 57, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_print.scss */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* line 61, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 64, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_print.scss */
+  tr {
+    page-break-inside: avoid;
+  }
+}
+@media only screen and (min-width: 480px) {
+  /* 480 =================================================== */
+  /* line 18, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_480.scss */
+  .subhead h1 {
+    font-size: 48px;
+  }
+  /* line 21, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_480.scss */
+  .subhead p {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* 600 =================================================== */
+  /* line 17, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_600.scss */
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* line 22, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_600.scss */
+  .subhead {
+    text-align: left;
+  }
+  /* line 24, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_600.scss */
+  .subhead h1 {
+    font-size: 60px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* 768 =================================================== */
+  /* line 17, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_768.scss */
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* line 22, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_768.scss */
+  .menu-button {
+    display: none;
+  }
+
+  /* line 26, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_768.scss */
+  .navbar {
+    position: fixed;
+    width: 100%;
+  }
+  /* line 29, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_768.scss */
+  .navbar .logo, .navbar .navbar-inner .nav li a {
+    float: right;
+  }
+  /* line 33, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_768.scss */
+  .navbar .nav li {
+    float: left;
+  }
+
+  /* line 38, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_768.scss */
+  .page-header {
+    margin: 66px 0 12px 0;
+  }
+
+  /* line 42, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_768.scss */
+  .hero {
+    margin: 44px 0 0 0;
+  }
+
+  /* line 47, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_768.scss */
+  .jumbo h1 {
+    font-size: 108px;
+  }
+  /* line 50, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_768.scss */
+  .jumbo p {
+    font-size: 40px;
+  }
+
+  /* line 55, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_768.scss */
+  .gallery-showcase {
+    width: 45%;
+    float: left;
+    margin: 0 2.5%;
+  }
+
+  /* line 61, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/_768.scss */
+  .gallery-description {
+    clear: none;
+    width: 45%;
+    float: left;
+    margin: 0 2.5%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* 992 =================================================== */
+}
+@media only screen and (min-width: 1382px) {
+  /* 1382 =================================================== */
+  /*body {*/
+  /*max-width : 1440px; }*/
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* 2x =================================================== */
+}
+/* 320 and Up */
+/* Modules upstart */
+/* Version: 1.0 */
+/* Author: Andy Clarke */
+/* URL: http://stuffandnonsense.co.uk/projects/320andup */
+/* line 12, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+.grid {
+  margin-bottom: 1.5em;
+  border-bottom: 1px dashed white;
+}
+
+/* line 16, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+.grid:last-child {
+  margin-bottom: 0;
+  border-bottom-width: 0;
+}
+
+/* line 20, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+.furniture-letter {
+  overflow: hidden;
+}
+
+/* line 23, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+.furniture-letter span {
+  display: block;
+  float: left;
+  margin: 0 12px 0 0;
+  height: 44px;
+  width: 44px;
+  background-color: #cb790f;
+  color: white;
+  font-size: 32px;
+  font-size: 3.2rem;
+  font-weight: bold;
+  line-height: 44px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 480px) {
+  /* Styles */
+}
+@media only screen and (min-width: 600px) {
+  /* Styles */
+}
+@media only screen and (min-width: 768px) {
+  /* line 51, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+  .grids-two .grid {
+    width: 43.03%;
+    margin-bottom: 0;
+    border-bottom-width: 0;
+  }
+
+  /* line 56, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+  .grids-two .grid-1 {
+    float: left;
+  }
+
+  /* line 59, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+  .grids-two .grid-2 {
+    float: right;
+  }
+
+  /* line 64, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+  .grids-three .grid-a {
+    float: left;
+    width: 31.64%;
+    margin-right: 2.53%;
+  }
+
+  /* line 71, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+  .grids-four .grid-a {
+    float: left;
+    width: 31.64%;
+    margin-right: 2.53%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* line 83, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+  .grids-three .grid {
+    float: left;
+    width: 31.64%;
+    margin: 0 2.53% 0 0;
+    border-bottom-width: 0;
+  }
+
+  /* line 89, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+  .grids-three .grid-3 {
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 93, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+  .grids-three .grid .grid-a {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.75em;
+  }
+
+  /* line 101, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+  .grids-four .grid {
+    float: left;
+    width: 20.25%;
+    margin: 0 6.32% 0 0;
+    border-bottom-width: 0;
+  }
+
+  /* line 107, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+  .grids-four .grid-4 {
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 111, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-modules/_upstart.scss */
+  .grids-four .grid .grid-a {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 1382px) {
+  /* Styles */
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+}
+/* 320 and Up */
+/* Panels Upstart */
+/* Version: 1.0 */
+/* Author: Andy Clarke */
+/* URL: http://stuffandnonsense.co.uk/projects/320andup */
+/* line 19, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-panels/_upstart.scss */
+.full {
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+  background-color: white;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+/* line 26, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-panels/_upstart.scss */
+.full .grids {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.5em 0;
+}
+
+@media only screen and (min-width: 480px) {
+  /* Styles */
+}
+@media only screen and (min-width: 600px) {
+  /* Styles */
+}
+@media only screen and (min-width: 768px) {
+  /* line 46, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-panels/_upstart.scss */
+  .special .grids-three .grid-a,
+  .special .grids-four .grid-a {
+    width: 43.03%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* line 56, /Users/jasongonzales/Projects/book/ch4/after/320andup/scss/upstarts/320andup-panels/_upstart.scss */
+  .special .grids-three .grid-a,
+  .special .grids-four .grid-a {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1382px) {
+  /* Styles */
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+}

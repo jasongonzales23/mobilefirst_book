@@ -1,0 +1,7 @@
+.DS_Store
+.sass-cache
+/.esproj/
+/.dropbox
+/Icon
+.DS_Store
+*.espressostorage
